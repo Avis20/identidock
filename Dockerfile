@@ -1,13 +1,15 @@
-FROM python:3.5
 
-RUN groupadd -r uwsgi && useradd -r -g uwsgi uwsgi
-RUN pip install Flask uWSGI requests redis
+FROM busybox
+# FROM python:3.5
 
-WORKDIR /app
-COPY app /app
-COPY cmd.sh /
+# RUN groupadd -r uwsgi && useradd -r -g uwsgi uwsgi
+# RUN pip install Flask uWSGI requests redis
 
-EXPOSE 9090 9191
-USER uwsgi
+# WORKDIR /app
+# COPY app /app
+# COPY cmd.sh /
 
-CMD ["/cmd.sh"]
+# EXPOSE 9090 9191
+# USER uwsgi
+
+# CMD ["/cmd.sh"]
