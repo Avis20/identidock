@@ -3,6 +3,7 @@ import requests
 import hashlib
 import redis
 
+
 app = Flask(__name__)
 redis = redis.StrictRedis( host='redis', port=6379, db=0 )
 salt="UNIQUE_SALT"
